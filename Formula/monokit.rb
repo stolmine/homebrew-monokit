@@ -6,7 +6,7 @@ class Monokit < Formula
   license "GPL-2.0"
 
   depends_on "rust" => :build
-  depends_on "supercollider"
+  cask "supercollider"
 
   def install
     system "cargo", "build", "--release", "--locked"
