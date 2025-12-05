@@ -6,7 +6,6 @@ class Monokit < Formula
   license "GPL-2.0"
 
   depends_on "rust" => :build
-  cask "supercollider"
 
   def install
     system "cargo", "build", "--release", "--locked"
@@ -16,6 +15,9 @@ class Monokit < Formula
 
   def caveats
     <<~EOS
+      Requires SuperCollider 3.13+
+      Install via: brew install --cask supercollider
+
       SuperCollider server files installed to:
         #{pkgshare}/sc
 
