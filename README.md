@@ -14,9 +14,15 @@ brew install --cask supercollider
 
 Required for the SVF filter and other UGens:
 
-```bash
-brew install sc3-plugins
-```
+1. Download the latest release for your platform from:
+   https://github.com/supercollider/sc3-plugins/releases
+
+2. Extract the archive and copy the `SC3plugins` folder to:
+   ```
+   ~/Library/Application Support/SuperCollider/Extensions/
+   ```
+
+   Create the `Extensions` folder if it doesn't exist.
 
 ### 3. Verify SuperCollider works
 

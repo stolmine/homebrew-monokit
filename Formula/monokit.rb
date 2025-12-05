@@ -15,9 +15,10 @@ class Monokit < Formula
 
   def caveats
     <<~EOS
-      Requires SuperCollider 3.13+ and sc3-plugins:
-        brew install --cask supercollider
-        brew install sc3-plugins
+      Requires SuperCollider 3.13+ and sc3-plugins.
+
+      See installation guide:
+        https://github.com/stolmine/homebrew-monokit
 
       SuperCollider server files installed to:
         #{pkgshare}/sc
