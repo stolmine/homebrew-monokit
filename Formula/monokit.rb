@@ -15,8 +15,9 @@ class Monokit < Formula
 
   def caveats
     <<~EOS
-      Requires SuperCollider 3.13+
-      Install via: brew install --cask supercollider
+      Requires SuperCollider 3.13+ and sc3-plugins:
+        brew install --cask supercollider
+        brew install sc3-plugins
 
       SuperCollider server files installed to:
         #{pkgshare}/sc
