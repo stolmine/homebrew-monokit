@@ -1,27 +1,26 @@
 class Monokit < Formula
   desc "Teletype-style scripting for a SuperCollider complex oscillator voice"
   homepage "https://github.com/stolmine/monokit"
-  url "https://github.com/stolmine/monokit/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "6df9020b2fff3712c3a9bc31d8cd9b6357e486fe3f5d2e972c12820d1c50afee"
+  version "0.1.1"
   license "GPL-2.0"
 
-  depends_on "rust" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/stolmine/monokit/releases/download/v0.1.1/monokit-0.1.1-aarch64-apple-darwin.tar.gz"
+      sha256 "PLACEHOLDER"
+    end
+  end
 
   def install
-    system "cargo", "build", "--release", "--locked"
-    bin.install "target/release/monokit"
-    pkgshare.install "sc"
+    # Install everything to libexec to keep bundle structure intact
+    libexec.install "monokit", "Resources", "Frameworks"
+    # Symlink binary to bin
+    bin.install_symlink libexec/"monokit"
   end
 
   def caveats
     <<~EOS
-      Requires SuperCollider 3.13+ and sc3-plugins.
-
-      See installation guide:
-        https://github.com/stolmine/homebrew-monokit
-
-      SuperCollider server files installed to:
-        #{pkgshare}/sc
+      Self-contained bundle - no SuperCollider installation required.
 
       User config stored at:
         ~/.config/monokit/
