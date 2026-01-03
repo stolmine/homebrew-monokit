@@ -7,7 +7,7 @@ class Monokit < Formula
   on_macos do
     on_arm do
       url "https://github.com/stolmine/monokit/releases/download/v0.4.3/monokit-0.4.3-aarch64-apple-darwin.tar.gz"
-      sha256 "85d56ca6f8df39b91522294ceb657e9479f310c0f6920b41f019e279f1210f49"
+      sha256 "15dc85f476818ea2c985c2be26a34203fc3034ed18cbad13b1268dabed04f3a3"
     end
   end
 
