@@ -1,13 +1,13 @@
 class Monokit < Formula
   desc "Teletype-style scripting for a SuperCollider complex oscillator voice"
   homepage "https://github.com/stolmine/monokit"
-  version "0.4.3"
+  version "0.4.4"
   license "GPL-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/stolmine/monokit/releases/download/v0.4.3/monokit-0.4.3-aarch64-apple-darwin.tar.gz"
-      sha256 "85d56ca6f8df39b91522294ceb657e9479f310c0f6920b41f019e279f1210f49"
+      url "https://github.com/stolmine/monokit/releases/download/v0.4.4/monokit-0.4.4-aarch64-apple-darwin.tar.gz"
+      sha256 "443dfdd60208891dd7ffe757bcec563e9e62003f59af2a90b481d46f06228a73"
     end
   end
 
